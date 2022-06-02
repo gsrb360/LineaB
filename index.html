@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" />
+
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+
+	<style>
+		#map {
+			width: 100%;
+			height: 800px;
+			box-shadow: 5px 5px 5px #888;
+		}
+	</style>
+
+
+</head>
+
+<body>
+	<div id="map"></div>
+	<script>
+		var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
+				+ 'contributors',
+			maxZoom: 18
+		});
+
+		var map = L.map('map', {
+			center: [1.614, -75.6],
+			zoom: 15,
+			layers: [osm]
+			,scrollWheelZoom: false,
+		});
+
+		var marUniversidad = L.marker([1.620524, -75.604366], {
+			draggable: false,
+			title: 'Click aquí'
+		}).addTo(map).bindPopup('Universidad de La Amazonia');
+
+		var marAlcaldia = L.marker([1.615063, -75.613847], {
+			draggable: false,
+			title: 'Click aquí'
+		}).addTo(map).bindPopup('Alcaldia Florencia');
+
+		var MarPlaza = L.marker([1.614933, -75.613231], {
+			draggable: false,
+			title: 'Click aquí'
+		}).addTo(map).bindPopup('Plaza Santander');
+
+
+		var circle = L.circle([1.615063, -75.613847], 500, {
+			color: 'red',
+			fillOpacity: 0.1
+		}).addTo(map);
+
+		var polygon = L.polygon([
+			[1.615143, -75.613641],
+			[1.614535, -75.613453],
+			[1.614725, -75.612826],
+			[1.615333, -75.613013]			
+		]).addTo(map);
+
+		var point1 = new L.LatLng(1.606030, -75.578642);
+		var point2 = new L.LatLng(1.606076, -75.578745);
+		var point3 = new L.LatLng(1.605953, -75.578822);
+		var point4 = new L.LatLng(1.605779, -75.578822);
+		var point5 = new L.LatLng(1.605661, -75.578767);
+		var point6 = new L.LatLng(1.605457, -75.578602);
+		var point7 = new L.LatLng(1.605354, -75.578493);
+		var point8 = new L.LatLng(1.605232, -75.578293);
+		var point9 = new L.LatLng(1.605027, -75.577655);
+		var point10 = new L.LatLng(1.604936, -75.577531);
+		var point11 = new L.LatLng(1.604837, -75.577453);
+		var point12 = new L.LatLng(1.604735, -75.577430);
+		var point13 = new L.LatLng(1.604643, -75.577515);
+		var point14 = new L.LatLng(1.604508, -75.577719);
+		var point15 = new L.LatLng(1.604283, -75.578014);
+		var point16 = new L.LatLng(1.604063, -75.578192);
+		var point17 = new L.LatLng(1.603757, -75.578374);
+		var point18 = new L.LatLng(1.603504, -75.578480);
+		var point19 = new L.LatLng(1.603892, -75.578904);
+		var point20 = new L.LatLng(1.604060, -75.579171);
+		var point21 = new L.LatLng(1.604134, -75.579371);
+		var point22 = new L.LatLng(1.604169, -75.579541);
+		var point23 = new L.LatLng(1.604179, -75.579711);
+		var point24 = new L.LatLng(1.604150, -75.579983);
+		var point25 = new L.LatLng(1.604056, -75.580544);
+		var point26 = new L.LatLng(1.603073, -75.585398);
+		var point27 = new L.LatLng(1.602979, -75.585602);
+		var point28 = new L.LatLng(1.602455, -75.588129);
+		var point29 = new L.LatLng(1.602062, -75.589973);
+		var point30 = new L.LatLng(1.602010, -75.590245);
+		var point31 = new L.LatLng(1.602001, -75.590831);
+		var point32 = new L.LatLng(1.602102, -75.591196);
+		var point33 = new L.LatLng(1.602764, -75.592566);
+		var point34 = new L.LatLng(1.603249, -75.593564);
+		var point35 = new L.LatLng(1.603857, -75.594921);
+		var point36 = new L.LatLng(1.604282, -75.595900);
+		var point37 = new L.LatLng(1.604554, -75.596398);
+		var point38 = new L.LatLng(1.604675, -75.596473);
+		var point39 = new L.LatLng(1.604765, -75.596622);
+		var point40 = new L.LatLng(1.605233, -75.597521);
+		var point41 = new L.LatLng(1.605541, -75.597914);
+		var point42 = new L.LatLng(1.606368, -75.598717);
+		var point43 = new L.LatLng(1.606441, -75.598825);
+		var point44 = new L.LatLng(1.606465, -75.598974);
+		var point45 = new L.LatLng(1.606495, -75.599821);
+		var point46 = new L.LatLng(1.606626, -75.600174);
+		var point47 = new L.LatLng(1.607289, -75.601713);
+		var point48 = new L.LatLng(1.607707, -75.602567);
+		var point49 = new L.LatLng(1.608368, -75.604008);
+		var point50 = new L.LatLng(1.608499, -75.604243);
+		var point51 = new L.LatLng(1.608806, -75.604260);
+		var point52 = new L.LatLng(1.609559, -75.604127);
+		var point53 = new L.LatLng(1.610063, -75.604092);
+		var point54 = new L.LatLng(1.610172, -75.604108);
+		var point55 = new L.LatLng(1.610328, -75.604176);
+		var point56 = new L.LatLng(1.612433, -75.605907);
+		var point57 = new L.LatLng(1.612595, -75.606029);
+		var point58 = new L.LatLng(1.612796, -75.606077);
+		var point59 = new L.LatLng(1.613061, -75.606067);
+		var point60 = new L.LatLng(1.613277, -75.606015);
+		var point61 = new L.LatLng(1.613445, -75.605913);
+		var point62 = new L.LatLng(1.614709, -75.604631);
+		var point63 = new L.LatLng(1.615199, -75.604224);
+		var point64 = new L.LatLng(1.615460, -75.604115);
+		var point65 = new L.LatLng(1.615561, -75.604172);
+		var point66 = new L.LatLng(1.615599, -75.604243);
+		var point67 = new L.LatLng(1.616066, -75.604553);
+		var point68 = new L.LatLng(1.617418, -75.605450);
+		var point69 = new L.LatLng(1.618076, -75.605890);
+		var point70 = new L.LatLng(1.618807, -75.606401);
+		var point71 = new L.LatLng(1.619170, -75.606042);
+		var point72 = new L.LatLng(1.619516, -75.605713);
+		var point73 = new L.LatLng(1.619849, -75.605402);
+		var point74 = new L.LatLng(1.620053, -75.605199);
+		var point75 = new L.LatLng(1.620136, -75.605183);
+		var point76 = new L.LatLng(1.620166, -75.605221);
+
+		var latlngs = [point1,point2,point3,point4,point5,point6,point7,point8,point9,point10,
+						point11,point12,point13,point14,point15,point16,point17,point18,point19,point20,
+						point21,point22,point23,point24,point25,point26,point27,point28,point29,point30,
+						point31,point32,point33,point34,point35,point36,point37,point38,point39,point40,
+						point41,point42,point43,point44,point45,point46,point47,point48,point49,point50,
+						point51,point52,point53,point54,point55,point56,point57,point58,point59,point60,
+						point61,point62,point63,point64,point65,point66,point67,point68,point69,point70,
+						point71,point72,point73,point74,point75,point76];
+		var polyline = L.polyline(
+			latlngs, { color: 'black' }
+		).addTo(map).bindPopup('Ruta Casa Universidad');
+
+		L.control.scale().addTo(map);
+	</script>
+</body>
+
+</html>
